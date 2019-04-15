@@ -7,6 +7,8 @@ import android.widget.*;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.net.wifi.*;
+import android.net.*;
 
 public class MainActivity extends Activity 
 {

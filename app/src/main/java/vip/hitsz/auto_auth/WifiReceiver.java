@@ -35,15 +35,17 @@ public class WifiReceiver extends BroadcastReceiver{
             }  
               
         }  
-        /*else if(intent.getAction().equals(WifiManager.WIFI_STATE_CHANGED_ACTION)){//wifi打开与否  
+        else if(intent.getAction().equals(WifiManager.WIFI_STATE_CHANGED_ACTION)){//wifi打开与否
             int wifistate = intent.getIntExtra(WifiManager.EXTRA_WIFI_STATE, WifiManager.WIFI_STATE_DISABLED);  
               
             if(wifistate == WifiManager.WIFI_STATE_DISABLED){  
-                System.out.println("系统关闭wifi");  
+                //System.out.println("系统关闭wifi");  
+                Toast.makeText(context, "关WIFI", Toast.LENGTH_SHORT).show();
             }  
             else if(wifistate == WifiManager.WIFI_STATE_ENABLED){  
-                System.out.println("系统开启wifi");  
+                //System.out.println("系统开启wifi");
+                Toast.makeText(context, "开WIFI", Toast.LENGTH_SHORT).show();
             }  
-        }  */
+        }
     }  
 }  

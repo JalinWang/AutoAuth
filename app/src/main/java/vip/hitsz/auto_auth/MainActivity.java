@@ -4,6 +4,9 @@ import android.app.*;
 import android.os.*;
 import android.widget.*;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 
 public class MainActivity extends Activity 
 {

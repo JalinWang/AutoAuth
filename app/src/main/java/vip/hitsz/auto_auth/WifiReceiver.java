@@ -13,10 +13,12 @@ public class WifiReceiver extends BroadcastReceiver{
     @Override  
     public void onReceive(Context context, Intent intent) {
         if(intent.getAction().equals(WifiManager.NETWORK_STATE_CHANGED_ACTION)){//wifi连接上与否  
-            System.out.println("网络状态改变");  
+            //System.out.println("网络状态改变");  
+            Toast.makeText(context, "网络状态改变", Toast.LENGTH_SHORT).show();
             NetworkInfo info = intent.getParcelableExtra(WifiManager.EXTRA_NETWORK_INFO);  
             if(info.getState().equals(NetworkInfo.State.DISCONNECTED)){  
-                System.out.println("wifi网络连接断开");  
+                //System.out.println("wifi网络连接断开");
+                Toast.makeText(context, "wifi网络连接断开", Toast.LENGTH_SHORT).show();
             }  
             else if(info.getState().equals(NetworkInfo.State.CONNECTED)){  
                   
@@ -24,10 +26,11 @@ public class WifiReceiver extends BroadcastReceiver{
                 WifiInfo wifiInfo = wifiManager.getConnectionInfo();                  
                   
                 //获取当前wifi名称  
-                System.out.println("连接到网络 " + wifiInfo.getSSID());
+                Toast.makeText(context, "连接到网络", Toast.LENGTH_SHORT).show();
+                //System.out.println("连接到网络 " + wifiInfo.getSSID());
                 if (wifiInfo.getSSID() == "HITSZ")
                 {
-                    Toast.makeText(getApplicationContext(), "HITSZ!!!!!!!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "HITSZ!!!!!!!", Toast.LENGTH_SHORT).show();
                 }
             }  
               
